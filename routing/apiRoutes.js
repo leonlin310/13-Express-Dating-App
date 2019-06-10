@@ -8,7 +8,8 @@ module.exports = function(app){
 
 
     app.get("/api/profiles", function(req, res){
-        console.log(profilesArray); //WORKING! going to /api/profiles is showing array
+        // console.log(profilesArray); //WORKING! going to /api/profiles is showing array
+        res.json(profilesArray[bestProfileIndex]);
     })
 
     app.post("/api/profiles", function(req, res){

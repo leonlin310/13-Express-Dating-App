@@ -22,7 +22,7 @@ app.use(express.json());
 // ================================================================================
 
 require("./routing/apiRoutes")(app);
-// require("./routing/htmlRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
 //boilerplate to listen for 'app'. 
 app.listen(PORT, function() {
