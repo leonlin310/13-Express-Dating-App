@@ -56,7 +56,17 @@ var profilesArray = [
             2,
             2
         ]
-    }
+    },
+    {
+        profileName: "Gordon",
+        photo: "https://www.google.com",
+        scores: [
+            3,
+            2,
+            1
+        ]
+    },
+
 ];
 
 module.exports = profilesArray;

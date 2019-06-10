@@ -19,21 +19,29 @@ module.exports = function(app){
         }
 
         // console.log("should be able to math now", playerInteger.scores);
-
-
+        //TODO: bestProfileIndex shows the index of the best friend from the profilesArray. 
+        bestProfileIndex = 0;
+        comparisonNumber = 99
         // console.log(profilesArray)
         //TODO: Logic, push this object to the profiles Array
         for (var i = 0; i < profilesArray.length; i++){
-          
+            //TODO: Set totalDifference in the outer loop to have a different totalDifference per each element in the profilesArray
             var totalDifference = 0;
             for (var x = 0; x < profilesArray[i].scores.length; x++){
                 var difference = Math.abs(playerInteger.scores[x] - profilesArray[i].scores[x]);
                 console.log(difference);
                 totalDifference += difference
-       
             }            
+
+            console.log("Total difference", totalDifference) //This shows the total difference for each person. 
+            if (totalDifference < comparisonNumber){
+                bestProfileIndex = i;
+                comparisonNumber = totalDifference;
+            }
+            console.log("Lowest comparison number", comparisonNumber);
+            console.log("index of the best profile match", bestProfileIndex);
         }
-        //Leon: 9 // Cindy: 6 // Popcorn: 3 // Teddy: 2
+        //Total difference: Leon: 9 // Cindy: 6 // Popcorn: 3 // Teddy: 2
         // profilesArray.push(req.body);
     })
 }
