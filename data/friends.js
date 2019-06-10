@@ -26,7 +26,35 @@ var profilesArray = [
         photo: "https://www.google.com",
         scores: [
             5,
+            5,
+            5
+        ]
+    },
+    {
+        profileName: "Cindy",
+        photo: "https://www.google.com",
+        scores: [
+            4,
+            4,
             4
+        ]
+    },
+    {
+        profileName: "Popcorn",
+        photo: "https://www.google.com",
+        scores: [
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        profileName: "Teddy",
+        photo: "https://www.google.com",
+        scores: [
+            2,
+            2,
+            2
         ]
     }
 ];
