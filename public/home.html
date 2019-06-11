@@ -14,27 +14,18 @@
 </head>
 <body>
     
-<p id = "matchWinner">
-tester
-<button id = "clicker">Click me</button>
+<h1>Welcome to the ghetto friend finder app! You will answer simple questions to find your new shallow best friend! Click below to begin</h1>
 
-</p>
+<a href = "/survey" id = "clicker"><button>Click me to start survey</button>
+
+<br>
+<br>
+<a href = "/api/profiles"><button>Click me to view api tables</button>
+
+
 
  <script>
 
-
-
- function showMatch(){    
-     $.ajax({url: "/api/profiles", method: "GET"})
-    .then(function(bestMatch){
-      document.getElementById("matchWinner").append(JSON.stringify(bestMatch))
-        console.log(bestMatch)
-       
-    })
-    
-}
-
-showMatch();
 </script>   
 </body>
 </html>

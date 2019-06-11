@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,95 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+
 </head>
+
 <body>
-    
-<button id ="clicker">CLICK ME</button>
 
-<p id = "testTag">placeholder text</p>
+    <div class="container-fluid">
 
-<script>
+        <form>
+            <h2>About You: </h2>
 
-$("#clicker").on("click", function(event){
-    event.preventDefault();
+                <div class="row">
+                        <div class="col">
+                          <input type="text" id= "nameID" class="form-control" placeholder="Enter your Name">
+                        </div>    
+               </div>
+               <br>
+               <div class="row">
+                    <div class="col">
+                      <input type="text"  id= "socialURL" class="form-control" placeholder="Enter your LinkedIn or Facebook URL">
+                    </div>    
+                 </div>
+<br>
+<br>
 
-    $.post("/api/profiles", newPerson, function(data){
-        console.log("this is data:", data); //Callback function working properly. 
-        $("#testTag").append(data.profileName);
- 
-    })
-})
+            <h4>Question 1</h4>
+            <div class="form-group">
+                <label for="question1">I like to do janitorial work.</label>
+                <select class="form-control" id="question1">
+                    <option value="empty"></option>
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <h4>Question 2</h4>
+            <div class="form-group">
+                <label for="question2">I like to do janitorial work.</label>
+                <select class="form-control" id="question2">
+                    <option value="empty"></option>
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+        </form>
+    </div>
 
-var newPerson =   {
-    profileName: "Lin",
-    photo: "https://www.google.com",
-    scores: [ 4, 4, 4 ] }
+
+    <button id="clicker">CLICK ME To submit your survey and see who your new best friend is</button>
+    <a href="/"><button>Click me to submit a new profile</button>
+
+        <p id="testTag"></p>
+
+
+
+
+        <script>
+
+            $("#clicker").on("click", function (event) {
+                event.preventDefault();
+                var newPerson = {
+                    profileName: $("#nameID").val().trim(),
+                    photo: $("#socialURL").val().trim(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val()
+                     ]
+                }
+                console.log("this is new person object",newPerson);
+                $.post("/api/profiles", newPerson, function (data) {
+                    console.log("this is data:", data); //Callback function working properly. 
+                    $("#testTag").append(data.profileName);
+                })
+            })
+
+            // var newPerson = {
+            //     profileName: "Lin",
+            //     photo: "https://www.google.com",
+            //     scores: [4, 4, 4]
+            // }
 
 // console.log(newPerson);
-    
-</script>
+
+        </script>
 
 </body>
+
 </html>

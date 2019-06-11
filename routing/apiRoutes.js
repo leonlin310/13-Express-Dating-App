@@ -8,8 +8,8 @@ module.exports = function(app){
 
 
     app.get("/api/profiles", function(req, res){
-        console.log(profilesArray); //WORKING! going to /api/profiles is showing array
-        // console.log(req)
+        // console.log(profilesArray); //WORKING! going to /api/profiles is showing array
+        res.json(profilesArray)
     ;
     })
 
@@ -47,7 +47,7 @@ module.exports = function(app){
         res.json(profilesArray[bestProfileIndex]) //THIS SHOWS ON THE API PAGE THE PERSON WITH THE BEST MATCH!!!
 
         //Total difference: Leon: 9 // Cindy: 6 // Popcorn: 3 // Teddy: 2
-        // profilesArray.push(req.body);
+        profilesArray.push(req.body); //to push the new object into profilesArray
     })
 }
 

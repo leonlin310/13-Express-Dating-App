@@ -23,8 +23,15 @@
 var profilesArray = [
     {
         profileName: "Leon",
-        photo: "https://www.google.com",
+        photo: "https://www.leon.com",
         scores: [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
             5,
             5,
             5
@@ -32,8 +39,15 @@ var profilesArray = [
     },
     {
         profileName: "Cindy",
-        photo: "https://www.google.com",
+        photo: "https://www.cindy.com",
         scores: [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
             4,
             4,
             4
@@ -41,8 +55,15 @@ var profilesArray = [
     },
     {
         profileName: "Popcorn",
-        photo: "https://www.google.com",
+        photo: "https://www.popcorn.com",
         scores: [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
             3,
             3,
             3
@@ -50,8 +71,17 @@ var profilesArray = [
     },
     {
         profileName: "Teddy",
-        photo: "https://www.google.com",
+        photo: "https://www.teddy.com",
         scores: [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
             2,
             2,
             2
@@ -59,11 +89,18 @@ var profilesArray = [
     },
     {
         profileName: "Gordon",
-        photo: "https://www.google.com",
+        photo: "https://www.gordon.com",
         scores: [
             3,
             2,
-            1
+            1,
+            2,
+            3,
+            4,
+            5,
+            1,
+            2,
+            5
         ]
     },
 
