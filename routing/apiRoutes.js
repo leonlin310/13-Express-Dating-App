@@ -14,7 +14,7 @@ module.exports = function(app){
     })
 
     app.post("/api/profiles", function(req, res){
-        console.log(req.body); //WORKING! this should display the object i add from postman
+        // console.log(req.body); //WORKING! this should display the object i add from postman
         var playerInteger = req.body
         for (var i = 0; i < playerInteger.scores.length; i++){
             playerInteger.scores[i] = parseInt(playerInteger.scores[i]);
@@ -35,18 +35,17 @@ module.exports = function(app){
                 totalDifference += difference
             }            
 
-            console.log("Total difference", totalDifference) //This sums the total difference for each person. 
+            // console.log("Total difference", totalDifference) //This sums the total difference for each person. 
             if (totalDifference < comparisonNumber){
                 bestProfileIndex = i;
                 comparisonNumber = totalDifference;
             }
         }
-        console.log("Lowest comparison number", comparisonNumber); //This shows the BEST match person
-        console.log("index of the best profile match", bestProfileIndex); //shows the index of the person with the best match. 
-        console.log("THIS SHOWS THE BEST BITCH OF ALL", profilesArray[bestProfileIndex]);
+        // console.log("Lowest comparison number", comparisonNumber); //This shows the BEST match person
+        // console.log("index of the best profile match", bestProfileIndex); //shows the index of the person with the best match. 
+        // console.log("THIS SHOWS THE BEST PERSON OF ALL", profilesArray[bestProfileIndex]);
         res.json(profilesArray[bestProfileIndex]) //THIS SHOWS ON THE API PAGE THE PERSON WITH THE BEST MATCH!!!
 
-        //Total difference: Leon: 9 // Cindy: 6 // Popcorn: 3 // Teddy: 2
         profilesArray.push(req.body); //to push the new object into profilesArray
     })
 }

@@ -144,12 +144,14 @@
 
 
     <button id="clicker">CLICK ME To submit your survey and see who your new best friend is</button>
-    <!-- <a href="/"><button>Click me to submit a new profile</button> -->
 <br>
 <br>
 <br>
         <p id="testTag"></p>
 
+<a href = "/api/profiles"><button>Click me to view api tables</button>
+
+        
         <script>
 
             $("#clicker").on("click", function (event) {
@@ -170,10 +172,11 @@
                         $("#question10").val()
                     ]
                 }
-                console.log("this is new person object", newPerson);
+                // console.log("this is new person object", newPerson);
                 $.post("/api/profiles", newPerson, function (data) {
-                    console.log("this is data:", data); //Callback function working properly. 
+                    // console.log("this is data:", data); //Callback function working properly. 
                     
+                    //create a variable listItem to put things in a list
                     var listItem = $("<li class='list-group-item mt-4'>");
                     listItem.append(
 
@@ -186,16 +189,6 @@
                     $("#testTag").prepend(listItem);
                 })
             })
-
-            // var newPerson = {
-            //     profileName: "Lin",
-            //     photo: "https://www.google.com",
-            //     scores: [4, 4, 4]
-            // }
-
-// console.log(newPerson);
-
-
         </script>
 
 </body>
