@@ -21,25 +21,25 @@
         <form>
             <h2>About You: </h2>
 
-                <div class="row">
-                        <div class="col">
-                          <input type="text" id= "nameID" class="form-control" placeholder="Enter your Name">
-                        </div>    
-               </div>
-               <br>
-               <div class="row">
-                    <div class="col">
-                      <input type="text"  id= "socialURL" class="form-control" placeholder="Enter your LinkedIn or Facebook URL">
-                    </div>    
-                 </div>
-<br>
-<br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="nameID" class="form-control" placeholder="Enter your Name">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="socialURL" class="form-control"
+                        placeholder="Enter your LinkedIn or Facebook URL">
+                </div>
+            </div>
+            <br>
+            <br>
 
             <h4>Question 1</h4>
             <div class="form-group">
-                <label for="question1">I like to do janitorial work.</label>
+                <label for="question1">I like to do watch NBA</label>
                 <select class="form-control" id="question1">
-                    <option value="empty"></option>
                     <option value="1">1 - Strongly Disagree</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -49,9 +49,8 @@
             </div>
             <h4>Question 2</h4>
             <div class="form-group">
-                <label for="question2">I like to do janitorial work.</label>
+                <label for="question2">I like Kevin Durant.</label>
                 <select class="form-control" id="question2">
-                    <option value="empty"></option>
                     <option value="1">1 - Strongly Disagree</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -59,17 +58,97 @@
                     <option value="5">5 - Strongly Agree</option>
                 </select>
             </div>
+            <div class="form-group">
+                <label for="question3">I like to drink beer.</label>
+                <select class="form-control" id="question3">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4">I like to play videogames.</label>
+                <select class="form-control" id="question4">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5">I like math puzzles.</label>
+                <select class="form-control" id="question5">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6">I like to eat pumpkins.</label>
+                <select class="form-control" id="question6">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7">I don't not like to dislike anti non conforming gender biases.</label>
+                <select class="form-control" id="question7">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8">I am enjoying coding bootcamp.</label>
+                <select class="form-control" id="question8">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9">I am really good at CSS.</label>
+                <select class="form-control" id="question9">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10">I like to huff paint.</label>
+                <select class="form-control" id="question10">
+                    <option value="1">1 - Strongly Disagree</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Strongly Agree</option>
+                </select>
+            </div>
+
         </form>
     </div>
 
 
     <button id="clicker">CLICK ME To submit your survey and see who your new best friend is</button>
-    <a href="/"><button>Click me to submit a new profile</button>
-
+    <!-- <a href="/"><button>Click me to submit a new profile</button> -->
+<br>
+<br>
+<br>
         <p id="testTag"></p>
-
-
-
 
         <script>
 
@@ -80,13 +159,31 @@
                     photo: $("#socialURL").val().trim(),
                     scores: [
                         $("#question1").val(),
-                        $("#question2").val()
-                     ]
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
                 }
-                console.log("this is new person object",newPerson);
+                console.log("this is new person object", newPerson);
                 $.post("/api/profiles", newPerson, function (data) {
                     console.log("this is data:", data); //Callback function working properly. 
-                    $("#testTag").append(data.profileName);
+                    
+                    var listItem = $("<li class='list-group-item mt-4'>");
+                    listItem.append(
+
+                        $("<h2>").text("Your new best friend is: "),
+                        $("<hr>"),
+                        $("<h4>").text("Name: " + data.profileName),
+                        $("<h4>").text("Contact: " + data.photo),
+
+                    )
+                    $("#testTag").prepend(listItem);
                 })
             })
 
@@ -97,6 +194,7 @@
             // }
 
 // console.log(newPerson);
+
 
         </script>
 
